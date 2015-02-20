@@ -1,0 +1,8 @@
+package position_stiffness_creator_msgs.msgs;
+
+message PositionStiffnessRequest
+{
+  required double position = 1;
+  required double stiffness = 2;
+
+}

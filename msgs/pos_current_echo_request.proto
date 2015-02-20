@@ -1,0 +1,11 @@
+package pos_current_echo_creator_msgs.msgs;
+
+message PosCurrentEchoRequest
+{
+  required double pos_out_shaft = 1;
+  required double pos_mot_1 = 2;
+  required double pos_mot_2 = 3;
+  required double curr_mot_1 = 4;
+  required double curr_mot_2 = 5;
+
+}
