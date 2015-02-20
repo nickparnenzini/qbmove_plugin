@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <sdf version ='1.4'>
-  <!-- model for inverted pendulum-->
+  <!-- model for qbmove-->
   <model name ='qbmove'>
    <static>false</static>
       <link name="flange">
@@ -27,10 +27,10 @@
           </geometry>
         </collision>
         <visual name="flange_visual">
-          <pose>0.0 0 0.033 1.57 0 0</pose>
+          <pose>0.0 0 0.05 -1.57 0 3.14</pose>
           <geometry>
             <mesh>
-             <uri>file://meshes/flat_flange.dae</uri>
+             <uri>file://meshes/c_flange.dae</uri>
             </mesh>
           </geometry>
           <material>
@@ -98,7 +98,7 @@
           </geometry>
         </collision>
         <visual name="cube_visual">
-          <pose>0 0 0.0 0.0 0 0</pose>
+          <pose>0 0 0.0 0.0 1.57 0</pose>
           <geometry>
             <mesh>
              <uri>file://meshes/cube.dae</uri>
@@ -118,7 +118,7 @@
         <child>flange</child>
         <pose>0.0 0.0 0.0 0 0 0</pose>
         <axis>
-          <xyz>0 0 1</xyz>
+          <xyz>1 0 0</xyz>
         </axis>
       </joint>
       <joint name="motor1_joint" type="revolute">
@@ -134,7 +134,7 @@
           <child>mot2</child>
           <pose>0.012 0.008 0.01 0 0 0</pose>
         <axis>
-          <xyz>0 0 1</xyz>
+          <xyz>1 0 0</xyz>
         </axis>
       </joint>
   <plugin name="plugin_cubebot" filename="build/libqbmove_plugin.so" />
