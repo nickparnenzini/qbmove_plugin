@@ -1,4 +1,4 @@
-This is a qbmove plugin in Gazebo. For further information,
+This is an open-source qbmove plugin in Gazebo. For further information,
 please visit: http://www.qbrobotics.com/
 
 If you want to use this software in Gazebo:
