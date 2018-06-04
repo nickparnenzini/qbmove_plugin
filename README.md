@@ -11,11 +11,11 @@ If you want to use this software in Gazebo:
 
 3) open a new terminal and digit the following commands: 
  ```
-	  $ cd ~/.gazebo/models/qbmove_plugin_v1.0/
-          $ mkdir build
-          $ cd build
-          $ cmake ../
-          $ make
+	$ cd ~/.gazebo/models/qbmove_plugin_v1.0/
+	$ mkdir build
+	$ cd build
+	$ cmake ../
+	$ make
  ```
 4) Now you should have an executable plugin for this model. 
 
@@ -25,13 +25,15 @@ If you want to use this software in Gazebo:
 6) before starting Gazebo, you must be in the folder: ~/.gazebo/models/qbmove_plugin_v1.0
    to let Gazebo load meshes of this model. 
    
-7) digit: $ gazebo -u
+7) digit: `$ gazebo -u`
    and a new Gazebo execution will start. Select 'qbmove' model from GUI. Then you can start simulation,
    but nothing will happen until you set values for your qbmove model. This will be done in the next step.
    
 8) Open a new terminal, and digit the following commands: 
-```      $ cd  ~/.gazebo/models/qbmove_plugin_v1.0/build
-      $ ./talker position_value stiffness_value```
-   where position_value and stiffness_value are values that you can choose for your qbmove model. 
+```
+	$ cd  ~/.gazebo/models/qbmove_plugin_v1.0/build
+	$ ./talker position_value stiffness_value
+```
+   where <i>position_value</i> and <i>stiffness_value</i> are values that you can choose for your qbmove model. 
    These values are in degrees. For instance, you could choose 45 and 0 for position and stiffness, respectively.
    You will see your qbmove model moving.
