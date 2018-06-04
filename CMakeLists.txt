@@ -2,6 +2,7 @@
 cmake_minimum_required(VERSION 2.8.8 FATAL_ERROR)
 FIND_PACKAGE( Boost 1.40 COMPONENTS system REQUIRED )
 set (CMAKE_CXX_FLAGS "-g -Wall")
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 include (FindPkgConfig)
 if (PKG_CONFIG_FOUND)

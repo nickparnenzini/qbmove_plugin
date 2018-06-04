@@ -22,13 +22,15 @@
 #include <sdf/sdf.hh>
 #include <gazebo/transport/transport.hh>
 #include <gazebo/msgs/msgs.hh>
-#include <gazebo/gazebo.hh>
+#include <gazebo/gazebo_client.hh>
 #include <iostream>
 #include <gazebo/transport/transport.hh>
 #include <gazebo/msgs/msgs.hh>
 #include <gazebo/math/gzmath.hh>
 #include "position_stiffness_request.pb.h"
 #include "pos_current_echo_request.pb.h"
+
+//In gazebo 7+ it is supposed to be `gazebo::client::setup(argc, argv)`, include gazebo_client.hh instead of gazebo.hh and need to include gazebo_config.hh initially to //get GAZEBO_MAJOR_VERSION.
 
 typedef const boost::shared_ptr<const position_stiffness_creator_msgs::msgs::PositionStiffnessRequest> PositionStiffnessRequestPtr;
 
@@ -54,7 +56,8 @@ void cb(PosCurrentEchoRequestPtr &msg)
 int main(int _argc, char **_argv)
 {
       // Load gazebo
-      gazebo::setupClient(_argc, _argv);
+      //gazebo::setupClient(_argc, _argv);
+      gazebo::client::setup(_argc, _argv);
 
       // Create our nodes for communication
       gazebo::transport::NodePtr node(new gazebo::transport::Node());
