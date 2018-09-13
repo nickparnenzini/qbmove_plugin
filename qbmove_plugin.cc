@@ -561,11 +561,11 @@ void qbmovePlugin::OnUpdate(const common::UpdateInfo & /*_info*/)
 		
 		/* motor 1 position update */
 		this->a.SetFromRadian(y1_k[0]); 
-		this->joint_motor1->SetAngle(0, this->a);
+		this->joint_motor1->SetPosition(0, y1_k[0]);
 		
 		/* motor 2 position update */
 		this->a.SetFromRadian(y2_k[0]); 
-		this->joint_motor2->SetAngle(0, this->a);
+		this->joint_motor2->SetPosition(0, y2_k[0]);
 		
 		/* motor 1 current computation */
 		curr_mot_1 = Vcc/R - (Kb/R)*x1_k[1]; 
