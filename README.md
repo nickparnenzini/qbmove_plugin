@@ -37,3 +37,7 @@ If you want to use this software in Gazebo:
    where <i>position_value</i> and <i>stiffness_value</i> are values that you can choose for your qbmove model. 
    These values are in degrees. For instance, you could choose 45 and 0 for position and stiffness, respectively.
    You will see your qbmove model moving.
+   
+This is how a qbmove will look like in Gazebo:
+
+![alt text](https://github.com/valeria-parnenzini/qbmove_plugin/blob/master/images/simulated__qbmove.png)
