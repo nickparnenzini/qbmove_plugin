@@ -40,4 +40,4 @@ If you want to use this software in Gazebo:
    
 This is how a qbmove will look like in Gazebo:
 
-![alt text](https://github.com/valeria-parnenzini/qbmove_plugin/blob/master/images/simulated__qbmove.png)
+                        ![alt text](https://github.com/valeria-parnenzini/qbmove_plugin/blob/master/images/simulated__qbmove.png)
